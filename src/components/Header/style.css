@@ -1,0 +1,22 @@
+.selected_navbar {
+    color: rgb(255, 217, 0);
+    font-size: 20px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.normal_navbar {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.normal_navbar:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: all 0.5s;
+}
