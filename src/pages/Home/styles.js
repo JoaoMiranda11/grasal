@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const BodyContent = styled.div`
+    min-height: 750px;
     width: 100%;
-    height: 750px;
+    height: 100%;
     justify-content: left;
     background-color: antiquewhite;
     display: flex;
@@ -13,7 +14,8 @@ export const BodyContent = styled.div`
 
 export const CardTable = styled.div`
     width: 100%;
-    height: 750px;
+    height: 50%;
+    margin-top: 50px;
     justify-content: left;
     background-color: antiquewhite;
     display: flex;
@@ -48,5 +50,10 @@ export const Card = styled.div`
     &:hover {
         transform: scale(1.05); 
         box-shadow: 1px 1px 2px black;
+    }
+
+    @media (max-width: 580px) {
+        width: 95%;
+        height: 500px;
     }
 `;

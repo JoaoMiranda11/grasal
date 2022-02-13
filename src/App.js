@@ -6,25 +6,27 @@ import Produtos from './pages/Produtos'
 import { Container } from './styles';
 import {  BrowserRouter, Routes, Route, Outlet, useParams } from 'react-router-dom' 
 import UserProvider from './contexts/user';
+import { ToastContainer } from 'react-toast';
 
 function App() {
   return (
-    <UserProvider>
-      <Container>
-          <BrowserRouter>
-            <Routes>
-              <Route path='/' element={<Header/>}>
-                <Route path='' element={<Home/>}/>
-                <Route path='produtos/' element={<>Produtos</>}/>
-                <Route path='produtos/:id' element={<Produtos/>}/>
-                <Route path='produtos/*' element={<>OPA! OBJETO NÃO ENCOTNRADO!</>}/>
-              </Route>
-              <Route path='/login' element={<Login/>}/>
-              <Route path='*' element = {<>Ops! Página inválida!</>}/>
-            </Routes>
-          </BrowserRouter>
-        </Container>
-    </UserProvider>
+    <Container>
+      <UserProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Header/>}>
+              <Route path='' element={<Home/>}/>
+              <Route path='produtos/' element={<>Produtos</>}/>
+              <Route path='produtos/:id' element={<Produtos/>}/>
+              <Route path='produtos/*' element={<>OPA! OBJETO NÃO ENCOTNRADO!</>}/>
+            </Route>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='*' element = {<>Ops! Página inválida!</>}/>
+          </Routes>
+        </BrowserRouter>
+        <ToastContainer delay={3000}/>
+      </UserProvider>
+    </Container>
   );
 }
 

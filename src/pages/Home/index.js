@@ -8,11 +8,10 @@ export default function Home() {
     const [Load, setLoad] = useState(true);
 
     useEffect(async ()=> {
-        console.log(usuarios);
         setCards(['Teste', 'Teste 2']);  
-        setInterval(()=>{
-            setLoad(false);
-        }, 3000);
+        setLoad(false);
+        // setInterval(()=>{
+        // }, 3000);
     }, []);
 
 
@@ -40,6 +39,9 @@ export default function Home() {
                     })
                 }
             </CardTable>
+            <div>
+                TESTE
+            </div>
         </BodyContent>
     )
 }
