@@ -11,6 +11,25 @@ export const BodyContent = styled.div`
     align-items: flex-start;
 `;
 
+export const CardTable = styled.div`
+    width: 100%;
+    height: 750px;
+    justify-content: left;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+`;
+
+export const PopUpPromo = styled.div`
+background-color: white;
+width: 100%;
+height: 100px;
+`;
+
 export const Card = styled.div`
     display: flex;
     text-align: center;

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { React, useEffect, useState } from 'react'
 
-export default function Carrinho() {
+export default function Produtos() {
     const [TextIni , setText] = useState('Carregando...');
     const { id } = useParams();
 
