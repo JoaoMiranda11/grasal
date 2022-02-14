@@ -8,14 +8,15 @@ margin: 5px;
 text-align: center;
 border-radius: 15px;
 border: 2px solid;
-border-color: rgb(0, 139, 139);
-background-color: rgb(0, 139, 139);
+border-color: rgb(24, 34, 78);;
+background-color: rgb(24, 34, 78);;
 width: 80%;
 transition: all 0.2s;
 cursor:pointer;
 
 &:hover {
-    color:rgb(0, 139, 139);
+    font-weight: bolder;
+    color:rgb(24, 34, 78);;
     background-color: white;
 }
 
@@ -26,6 +27,7 @@ export const BodyContent = styled.div.attrs(props => ({
     img : props.imgbg
 }))`
 background-size: 100% 100%;
+opacity: 70%;
 background-image: url(${props => props.img});
 flex: 1;
 height: 100%;
@@ -70,28 +72,28 @@ border-color: ${props => props.bdcolorP};
 outline: 0px;
 
 &:not(:placeholder-shown) {
-    border-color: rgb(0, 139, 139);
+    border-color: rgb(24, 34, 78);;
     & + .labelInputLogin {
-        color: rgb(0, 139, 139);
+        color: rgb(24, 34, 78);;
         position: relative;
         top:-42px;
     }
     & + .labelInputPassword {
-        color: rgb(0, 139, 139);
+        color: rgb(24, 34, 78);;
         position: relative;
         top:-42px;
     }
 }
 
 &:focus {
-    border-color: rgb(0, 139, 139);
+    border-color: rgb(24, 34, 78);;
     & + .labelInputLogin {
-        color: rgb(0, 139, 139);
+        color: rgb(24, 34, 78);;
         position: relative;
         top:-42px;
     }
     & + .labelInputPassword {
-        color: rgb(0, 139, 139);
+        color: rgb(24, 34, 78);;
         position: relative;
         top:-42px;
     }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../contexts/user';
 import { BodyContent, LoginBox, FormLogin, LabelInput, InputText, BtnInputForm } from './styles';
-import background from "../../imgs/bg.jpg";
+import background from "../../imgs/bg.jpeg";
 import { toast } from 'react-toast';
 
 export default function Login() {

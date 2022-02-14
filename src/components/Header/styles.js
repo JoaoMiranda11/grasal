@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const UserArea = styled.div`
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: red;
+margin-right: 50px;
+`;
+
 export const UserContainer = styled.div`
 display: flex;
 flex-direction: row;
@@ -126,6 +135,9 @@ export const UserInfo = styled.div`
     font-size: 20px;
 
     & .UserName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media (max-width: 500px) {
             font-size: 12px;
         }
@@ -139,7 +151,6 @@ export const UserInfo = styled.div`
         height: 20px;
         padding: 20px;
         border-radius: 100px;
-        margin-right: 50px;
         cursor: pointer;
         transition: all .2s ease-in-out;
 

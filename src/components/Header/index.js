@@ -6,7 +6,8 @@ import { Head,
     LogoIMG, 
     PageBody, 
     SideBarIcon,
-    LogoContainer } from './styles';
+    LogoContainer,
+    UserArea } from './styles';
 import { useUser } from '../../contexts/user';
 import logoGrafica from './../../imgs/logo_grasal.png'
 import {
@@ -40,7 +41,7 @@ export default function Header(props) {
                             Shop
                         </NavLink>
                     </Options>
-                    <div>
+                    <UserArea>
                         <UserInfo>
                             <div className="IconOption">
                                 <FaRegUser onClick={()=>{navigate('/login')}}/>
@@ -49,7 +50,7 @@ export default function Header(props) {
                                 {usuarios.nome && `Olá, ${usuarios.nome}!`}
                             </div>
                         </UserInfo>
-                    </div>
+                    </UserArea>
                 </Head>
             </nav>
             <Outlet/>
