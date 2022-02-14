@@ -1,12 +1,82 @@
 import styled from 'styled-components';
 
+//rgb(252, 211, 215) rosa
+//rgb(24, 34, 78) azul
+
+export const Footer = styled.div`
+    height: 100px;
+    background-color: rgb(24, 34, 78);
+`;
+
+export const Menu = styled.div.attrs(props => ({
+    show: props.show?'flex':'none',
+    drop: props.show?'100%':'0%'
+}))`
+width: 100%;
+display: none;
+background-color: rgb(24, 34, 78);
+& .selected_navbar {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    border-bottom: 2px solid;
+    border-color: white;
+    margin-top: 2px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom: 10px;
+}
+& .normal_navbar {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+    display: ${props=>props.show};
+    justify-content: center;
+    align-items: center;
+}
+`;
+
 export const UserArea = styled.div`
 height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: red;
 margin-right: 50px;
+& .iconDiv {
+    border: 2px solid;
+    padding: 7px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+        color: rgb(24, 34, 78);
+    }
+}
+& .count {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(24, 34, 78);
+    position: relative;
+    right:-60px;
+    top:10px;
+    border: 2px solid;
+    border-radius: 20px;
+    font-size:12px;
+    padding:2px;
+}
 `;
 
 export const UserContainer = styled.div`
@@ -70,16 +140,19 @@ export const Head = styled.div`
     color: white;
     background-color: rgb(24, 34, 78);
     font-size: 20px;
-
+    
     @media (max-width: 500px) {
+        transition: all 0.2s;
         & .options {
             display:none;
         }
+        justify-content: center;
     }
 `;
 
 export const SideBarIcon = styled.div`
     display: none;
+    cursor: pointer;
     @media (max-width: 500px) {
         width: 10%;
         display: flex;
@@ -147,12 +220,15 @@ export const UserInfo = styled.div`
         display: flex;
         border: 2px solid;
         border-color: white;
-        width: 20px;
-        height: 20px;
-        padding: 20px;
+        padding: 10px;
         border-radius: 100px;
         cursor: pointer;
         transition: all .2s ease-in-out;
+
+        & .FAIconUser {
+            width: 30px;
+            height: 30px;
+        }
 
         &:hover {
             background-color: white;

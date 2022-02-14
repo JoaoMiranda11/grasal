@@ -12,32 +12,44 @@
     {
       "id": 1,
       "title": "Produto 1",
-      "amount": 10
+      "priceBRL": 100,
+      "priceUS": 20,
+      "avaliable": 10
     },
     {
       "id": 4,
       "title": "Produto 2",
-      "amount": 5
+      "priceBRL": 100,
+      "priceUS": 20,
+      "avaliable": 5
     },
     {
       "id": 124,
       "title": "Produto 4",
-      "amount": 3
+      "priceBRL": 100,
+      "priceUS": 20,
+      "avaliable": 3
     },
     {
       "id": 122,
       "title": "Produto 5",
-      "amount": 6
+      "priceBRL": 100,
+      "priceUS": 20,
+      "avaliable": 6
     },
     {
       "id": 212,
       "title": "Produto 6",
-      "amount": 8
+      "priceBRL": 100,
+      "priceUS": 20,
+      "avaliable": 8
     },
     {
       "id": 232,
       "title": "Produto 7",
-      "amount": 10
+      "priceBRL": 100,
+      "priceUS": 20,
+      "avaliable": 10
     }
   ]
 }
