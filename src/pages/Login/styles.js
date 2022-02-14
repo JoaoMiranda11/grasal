@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const BtnInputForm = styled.div`
 font-family: 'Nunito', sans-serif;
 color: white;
@@ -75,12 +74,12 @@ outline: 0px;
     & + .labelInputLogin {
         color: rgb(0, 139, 139);
         position: relative;
-        top:-40px;
+        top:-42px;
     }
     & + .labelInputPassword {
         color: rgb(0, 139, 139);
         position: relative;
-        top:-40px;
+        top:-42px;
     }
 }
 
@@ -89,12 +88,12 @@ outline: 0px;
     & + .labelInputLogin {
         color: rgb(0, 139, 139);
         position: relative;
-        top:-40px;
+        top:-42px;
     }
     & + .labelInputPassword {
         color: rgb(0, 139, 139);
         position: relative;
-        top:-40px;
+        top:-42px;
     }
 }
 

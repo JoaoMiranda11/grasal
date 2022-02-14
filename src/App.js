@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Header/>}>
               <Route path='' element={<Home/>}/>
-              <Route path='produtos/' element={<>Produtos</>}/>
+              <Route path='produtos/' element={<Produtos/>}/>
               <Route path='produtos/:id' element={<Produtos/>}/>
               <Route path='produtos/*' element={<>OPA! OBJETO NÃO ENCOTNRADO!</>}/>
             </Route>

@@ -3,10 +3,16 @@ import React, { useContext, useEffect } from 'react';
 import { Head, 
     Options, 
     UserInfo, 
-    Select, 
+    LogoIMG, 
     PageBody, 
-    SideBarIcon } from './styles';
+    SideBarIcon,
+    LogoContainer } from './styles';
 import { useUser } from '../../contexts/user';
+import logoGrafica from './../../imgs/logo_grasal.png'
+import {
+    FaAlignJustify,
+    FaRegUser
+} from 'react-icons/fa';
 
 export default function Header(props) {
     const navigate = useNavigate();
@@ -16,52 +22,37 @@ export default function Header(props) {
         
     }, []); 
 
-    function goToRoute(id) {
-        switch (id) {
-            case '1':
-                navigate('/');
-            break;
-            case '2':
-                navigate('/produtos');
-            break;
-            default:
-                alert('Opa! Houve algum erro!')
-            break;
-        }
-    }
-
     return (
         <PageBody>
             <nav>
                 <Head>
                     <SideBarIcon>
-                        TESTE
+                        <FaAlignJustify/>
                     </SideBarIcon>
                     <Options className="options">
+                        <LogoContainer>
+                            <LogoIMG src={logoGrafica}/>
+                        </LogoContainer>
                         <NavLink className={({ isActive }) => isActive ? "selected_navbar" : "normal_navbar"} to="/">
                             Home
                         </NavLink>
                         <NavLink className={({ isActive }) => isActive ? "selected_navbar" : "normal_navbar"} to="/produtos">
-                            Cart
+                            Shop
                         </NavLink>
                     </Options>
-                    <Select onChange={(t)=>{goToRoute(t.target.value)}}>
-                        <option disabled defaultValue value="0">Procurar</option>
-                        <option value="1" >Home</option>
-                        <option value="2" >Produtos</option>
-                        <option>Outro</option>
-                    </Select>
-                    <UserInfo>
-                        <div className="IconOption">
-                            OPC
-                        </div>
-                        <div className="UserName">
-                            {usuarios.nome && `Olá, ${usuarios.nome}!`}
-                        </div>
-                    </UserInfo>
+                    <div>
+                        <UserInfo>
+                            <div className="IconOption">
+                                <FaRegUser onClick={()=>{navigate('/login')}}/>
+                            </div>
+                            <div className="UserName">
+                                {usuarios.nome && `Olá, ${usuarios.nome}!`}
+                            </div>
+                        </UserInfo>
+                    </div>
                 </Head>
-                <Outlet/>
             </nav>
+            <Outlet/>
         </PageBody>
     );
 }

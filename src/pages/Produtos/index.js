@@ -1,21 +1,38 @@
-import { useParams } from "react-router-dom";
-import { React, useEffect, useState } from 'react'
+import { useState, React, useEffect, useContext } from "react"
+import { BodyContent, Card, PopUpPromo, CardTable } from './styles';
+import { useUser } from '../../contexts/user'
+import api from './../../services/api'
 
-export default function Produtos() {
-    const [TextIni , setText] = useState('Carregando...');
-    const { id } = useParams();
+export default function Home() {
+    const { usuarios } = useUser();
+    const [loadings, setLoads] = useState({card:true});
+    const [cards, setCards] = useState([]);
 
-    useEffect(()=> {
-        setInterval(
-            () => {
-                setText(id);
-            }
-        , 2000);
-    }, [id]);
+    useEffect(async ()=> {
+        async function loadAPI() {
+            const response = await api.get('products');
+            let currentLoadings = loadings;
+            currentLoadings.card = false;
+            setLoads(currentLoadings);
+            setCards(response.data);
+        }
+        loadAPI();
+    }, []);
 
     return(
-        <>
-            {TextIni}
-        </>
+        <BodyContent>
+            {loadings.card && <>Carregando...</>}
+            <CardTable>
+                {
+                    cards.map((e)=> {
+                        return (
+                            <Card key={e.id}>
+                                {e.title}
+                            </Card>
+                        )
+                    })
+                }
+            </CardTable>
+        </BodyContent>
     )
 }
